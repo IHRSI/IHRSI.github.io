@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiten Raj Singh | Expedition Portfolio</title>
+  <meta name="description" content="Software Engineer · Hackathon Finalist · Builder">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body class="day-mode">
+  
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Global Elements -->
+  
+  <div class="theme-toggle-wrapper">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Day/Night Mode">
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon">🌌</span>
+    </button>
+  </div>
+  
+  <div class="expedition-sidebar">
+    <div class="sidebar-rope"></div>
+    <div class="sidebar-carabiner" id="sidebar-carabiner">
+      <svg viewBox="0 0 24 40" width="16" height="28" xmlns="http://www.w3.org/2000/svg">
+        <!-- Carabiner Body -->
+        <path d="M 12 2 C 20 2, 22 8, 22 20 C 22 32, 20 38, 12 38 C 4 38, 2 32, 2 26 L 2 14 C 2 8, 4 2, 12 2 Z" fill="none" stroke="var(--aurora-teal)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Carabiner Gate (Red) -->
+        <line x1="2" y1="14" x2="2" y2="26" stroke="#e74c3c" stroke-width="3" stroke-linecap="round"/>
+        <!-- Screw lock -->
+        <rect x="0" y="16" width="4" height="6" fill="#ecf0f1" rx="1"/>
+      </svg>
+    </div>
+    <div class="sidebar-dots">
+      <a href="#base-camp" class="sidebar-dot active"><span class="sidebar-tooltip">Base Camp</span></a>
+      <a href="#aurora-moment" class="sidebar-dot"><span class="sidebar-tooltip">About</span></a>
+      <a href="#zermatt-tech" class="sidebar-dot"><span class="sidebar-tooltip">Tech Stack</span></a>
+      <a href="#pipeline-projects" class="sidebar-dot"><span class="sidebar-tooltip">Projects</span></a>
+      <a href="#interlaken-achievements" class="sidebar-dot"><span class="sidebar-tooltip">Achievements</span></a>
+      <a href="#library-education" class="sidebar-dot"><span class="sidebar-tooltip">Education</span></a>
+      <a href="#victoria-falls-leadership" class="sidebar-dot"><span class="sidebar-tooltip">Leadership</span></a>
+      <a href="#summit-contact" class="sidebar-dot"><span class="sidebar-tooltip">The Summit</span></a>
+    </div>
+  </div>
+
+  <div class="expedition-log" id="expedition-log">
+    <span class="log-text" id="log-text">Altitude: 2,800m. Visibility: uncertain. Base Camp established. JEE cleared. Now we climb.</span>
+  </div>
+
+  <div id="particle-container" class="particle-container"></div>
+
+  <main>
+    <!-- Section 1: Base Camp -->
+    <section id="base-camp" class="section section-hero">
+      <div class="hero-mountains" id="hero-mountains">
+        <div class="hero-mountain-layer hero-mountain-back"></div>
+        <div class="hero-mountain-layer hero-mountain-mid"></div>
+        <div class="hero-mountain-layer hero-mountain-front"></div>
+      </div>
+      <div class="hero-fog">
+        <div class="fog-layer fog-layer-1"></div>
+        <div class="fog-layer fog-layer-2"></div>
+        <div class="fog-layer fog-layer-3"></div>
+      </div>
+      <div class="hero-keywords">
+         <span class="flowing-keyword">HACKATHONS</span>
+         <span class="flowing-keyword">DSA</span>
+         <span class="flowing-keyword">C++</span>
+         <span class="flowing-keyword">JAVA</span>
+         <span class="flowing-keyword">cd ..</span>
+         <span class="flowing-keyword">ls -la</span>
+         <span class="flowing-keyword">grep</span>
+         <span class="flowing-keyword">mkdir</span>
+         <span class="flowing-keyword">IF-ELSE</span>
+         <span class="flowing-keyword">FOR-WHILE</span>
+      </div>
+      <div class="hero-content reveal">
+        <div class="hero-stamp">EXPEDITION EST. 2023</div>
+        <h1 class="hero-title">THE EXPEDITION</h1>
+        <h2 class="hero-subtitle">PORTFOLIO</h2>
+        <div class="hero-divider"></div>
+        <p class="hero-name">Hiten Raj Singh</p>
+        <p class="hero-descriptor">Software Engineer · Developer · Problem Solver · Hackathon Enthusiast</p>
+        <a href="#aurora-moment" class="hero-cta">
+          Begin the Expedition <span class="compass">↓</span>
+        </a>
+      </div>
+      <div class="scroll-indicator">
+         <div class="scroll-indicator-line"></div>
+      </div>
+    </section>
+
+    <!-- Section 2: Aurora Moment -->
+    <section id="aurora-moment" class="section section-aurora">
+       <div class="stars-container">
+          <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+          <div class="star" style="top: 30%; left: 80%; animation-delay: 1s;"></div>
+          <div class="star" style="top: 50%; left: 40%; animation-delay: 2s;"></div>
+          <div class="star" style="top: 70%; left: 60%; animation-delay: 0.5s;"></div>
+          <div class="star" style="top: 80%; left: 10%; animation-delay: 1.5s;"></div>
+       </div>
+       <div class="aurora-band aurora-band-1"></div>
+       <div class="aurora-band aurora-band-2"></div>
+       <div class="aurora-mountains"></div>
+       
+       <div class="aurora-content reveal bento-grid">
+
+          <!-- Pane 1: Identity -->
+          <div class="bento-pane bento-identity">
+             <div class="identity-header-data">
+                <svg class="identity-barcode" viewBox="0 0 100 20" preserveAspectRatio="none">
+                   <rect x="0" y="0" width="4" height="20" fill="currentColor"/>
+                   <rect x="6" y="0" width="2" height="20" fill="currentColor"/>
+                   <rect x="12" y="0" width="8" height="20" fill="currentColor"/>
+                   <rect x="24" y="0" width="2" height="20" fill="currentColor"/>
+                   <rect x="30" y="0" width="4" height="20" fill="currentColor"/>
+                   <rect x="36" y="0" width="6" height="20" fill="currentColor"/>
+                   <rect x="46" y="0" width="2" height="20" fill="currentColor"/>
+                   <rect x="52" y="0" width="10" height="20" fill="currentColor"/>
+                   <rect x="64" y="0" width="4" height="20" fill="currentColor"/>
+                   <rect x="70" y="0" width="2" height="20" fill="currentColor"/>
+                   <rect x="76" y="0" width="8" height="20" fill="currentColor"/>
+                   <rect x="86" y="0" width="4" height="20" fill="currentColor"/>
+                   <rect x="94" y="0" width="6" height="20" fill="currentColor"/>
+                </svg>
+                <div class="identity-auth-text">SYSTEM ID: AUTHENTICATED</div>
+             </div>
+             
+             <div class="identity-photo-wrapper">
+                <img src="Profile_photo.jpeg" alt="Hiten Raj Singh">
+                <div class="identity-overlay">
+                   <div class="status-beacon"><span class="beacon-dot"></span> Status: Active</div>
+                   <div class="identity-name">Hiten Raj Singh</div>
+                </div>
+             </div>
+             
+             <div class="identity-footer-data">
+                <div class="bio-match">Biometric Match: <span class="highlight-green">99.9%</span></div>
+                <div class="radar-container">
+                   <div class="radar-sweep"></div>
+                </div>
+             </div>
+          </div>
+          
+          <!-- Pane 2: True Terminal Bio -->
+          <div class="bento-pane bento-terminal">
+             <div class="bento-header terminal-header">
+                <div><span class="header-icon">&gt;</span> terminal/bio.exe<span class="cursor-blink">█</span></div>
+                <div class="coord-numbers">13.3525° N, 74.7928° E</div>
+             </div>
+             <div class="aurora-bio-lead terminal-text">Computer Science undergraduate at MIT Manipal.</div>
+             <div class="aurora-bio-body terminal-text">
+                I enjoy building software that solves real-world problems through engineering, problem solving, and product thinking. My interests span full-stack development, AI applications, cloud technologies, and user-focused digital experiences.
+             </div>
+             <div class="terminal-system-log">&gt; compiling life_experiences.sh... [OK]</div>
+          </div>
+          
+          <!-- Pane 3: Major Skills (Replaced Philosophy) -->
+          <div class="bento-pane bento-skills">
+             <div class="bento-header">
+                <span class="header-icon">⚙️</span> /core_modules
+             </div>
+             <ul class="skills-list-bento">
+                <li>C++ (STL)</li>
+                <li>Problem Solving</li>
+                <li>Programming</li>
+                <li>Team Leadership</li>
+                <li>DSA</li>
+                <li>Event Management</li>
+             </ul>
+          </div>
+          
+          <!-- Pane 4: Milestones (formerly Field Notes) -->
+          <div class="bento-pane bento-field-notes">
+             <div class="bento-header">
+                <span class="header-icon">🏆</span> /milestones
+             </div>
+             <div class="notes-content">
+                <div class="note-item">Amazon HackOn Top 130/15,000+</div>
+                <div class="note-item">GenAI Hackathon Runner-Up</div>
+                <div class="note-item">Social Welfare Dir @ Red-X</div>
+                <div class="note-item">Built 8+ Tech Projects</div>
+             </div>
+          </div>
+          
+          <!-- Pane 5: Field Notes (formerly Coordinates) -->
+          <div class="bento-pane bento-coordinates">
+             <div class="bento-header field-notes-header">
+                <span class="header-icon">🏔️</span> /field_notes
+             </div>
+             <div class="field-notes-content">
+                <span>Led 6+ large-scale events and treks for 900+ participants.</span>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Section 3: Tech Stack -->
+    <section id="zermatt-tech" class="section section-tech">
+      <div class="tech-mountain-bg"></div>
+      <div class="tech-header reveal">
+        <p class="tech-location">The Slopes of Zermatt</p>
+        <h2 class="tech-title">Tech Stack</h2>
+        <div class="weather-hud">Inventory Check: Complete. All systems nominal for ascent.</div>
+      </div>
+      
+      <div class="piste-map reveal">
+         <!-- Pack 1: Core Languages -->
+         <div class="ski-run pack-core">
+            <div class="run-header">
+               <div class="run-marker"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></div>
+               <div>
+                  <div class="run-label">Programming Languages</div>
+               </div>
+            </div>
+            <div class="skills-list">
+               <div class="skill-chip">C/C++ <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">Java <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">Python <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">SQL <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">PL/SQL <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">ARM Assembly <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">Embedded C <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">Bash <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">HTML <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">CSS <span class="skill-type-badge">programming</span></div>
+               <div class="skill-chip">Verilog <span class="skill-type-badge">programming</span></div>
+            </div>
+         </div>
+
+         <!-- Pack 2: Frameworks & Libraries -->
+         <div class="ski-run pack-frameworks">
+            <div class="run-header">
+               <div class="run-marker"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
+               <div>
+                  <div class="run-label">Frameworks & Libraries</div>
+               </div>
+            </div>
+            <div class="skills-list">
+               <div class="skill-chip">Django <span class="skill-type-badge">framework</span></div>
+               <div class="skill-chip">CUDA <span class="skill-type-badge">platform</span></div>
+               <div class="skill-chip">MPI <span class="skill-type-badge">library</span></div>
+               <div class="skill-chip">JavaFX <span class="skill-type-badge">framework</span></div>
+               <div class="skill-chip">STL <span class="skill-type-badge">library</span></div>
+            </div>
+         </div>
+         
+         <!-- Pack 3: CS Fundamentals -->
+         <div class="ski-run pack-fundamentals">
+            <div class="run-header">
+               <div class="run-marker"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+               <div>
+                  <div class="run-label">CS Fundamentals</div>
+               </div>
+            </div>
+            <div class="skills-list">
+               <div class="skill-chip">Data Structures & Algorithms <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">OOP <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">DBMS <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">Operating Systems <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">Computer Networks <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">Cryptography <span class="skill-type-badge">concept</span></div>
+               <div class="skill-chip">SDLC <span class="skill-type-badge">concept</span></div>
+            </div>
+         </div>
+
+         <!-- Pack 4: Cloud & Tools -->
+         <div class="ski-run pack-tools">
+            <div class="run-header">
+               <div class="run-marker"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></div>
+               <div>
+                  <div class="run-label">Tools, Cloud & Platforms</div>
+               </div>
+            </div>
+            <div class="skills-list">
+               <div class="skill-chip">Git / GitHub <span class="skill-type-badge">tool</span></div>
+               <div class="skill-chip">VS Code <span class="skill-type-badge">tool</span></div>
+               <div class="skill-chip">Ubuntu (VM) <span class="skill-type-badge">tool</span></div>
+               <div class="skill-chip">Keil uVision <span class="skill-type-badge">tool</span></div>
+               <div class="skill-chip">Adobe Express <span class="skill-type-badge">tool</span></div>
+               <div class="skill-chip">AKS <span class="skill-type-badge">cloud</span></div>
+               <div class="skill-chip">Supabase <span class="skill-type-badge">database</span></div>
+               <div class="skill-chip">Vercel / Netlify <span class="skill-type-badge">cloud</span></div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Pipeline Projects -->
+    <section id="pipeline-projects" class="section section-projects">
+      <div class="ocean-waves">
+         <div class="wave-layer wave-layer-1">
+           <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.15,189.92,96.6,236.43,82.12,279.79,66.69,321.39,56.44Z" fill="currentColor"></path></svg>
+         </div>
+         <div class="wave-layer wave-layer-2">
+           <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="currentColor"></path></svg>
+         </div>
+      </div>
+      <div class="projects-header reveal">
+        <p class="projects-location">Banzai Pipeline Logbook</p>
+        <h2 class="projects-title">Projects</h2>
+      </div>
+      
+      <div class="projects-grid reveal">
+         <!-- VoicePay -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-large">large wave</div>
+            <div class="project-category">AI + FinTech <span class="project-status-badge">Hackathon Project</span></div>
+            <h3 class="project-name">VoicePay</h3>
+            <div class="project-duration">Jun 2025 • Role: Builder</div>
+            <p class="project-description">Voice-first payment platform making digital payments accessible through speech — ASR, NLU, multilingual TTS, OTP workflow.</p>
+            <div class="project-impact">Fully voice-controlled payment experience designed to make digital payments more accessible for users with disabilities.</div>
+            <div class="project-stack">
+                <span class="stack-tag">Web Speech API</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Tailwind CSS</span><span class="stack-tag">Netlify</span>
+            </div>
+            <div class="project-links">
+                <a href="https://voicepay1.netlify.app/" target="_blank" class="project-link icon-link" title="Live Demo" aria-label="Live Demo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                <a href="https://github.com/IHRSI/Voice_Pay" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- RedXOfficial -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-large">large wave</div>
+            <div class="project-category">Production Website</div>
+            <h3 class="project-name">RedXOfficial</h3>
+            <div class="project-duration">Apr 2026 • Role: Solo developer</div>
+            <p class="project-description">Official website for Red-X, MIT Manipal's socio-adventure club. Enabling trek registrations and business promotion.</p>
+            <div class="project-impact">400+ users in first month, 950+ page views. Improved club visibility and engagement.</div>
+            <div class="project-stack">
+                <span class="stack-tag">React</span><span class="stack-tag">Three.js</span><span class="stack-tag">Vite</span><span class="stack-tag">Vercel</span>
+            </div>
+            <div class="project-links">
+                <a href="https://red-x-official.vercel.app/" target="_blank" class="project-link icon-link" title="Live Demo" aria-label="Live Demo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                <a href="https://github.com/IHRSI/RedX_Official" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- VVARSHAA -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-large">large wave</div>
+            <div class="project-category">Data Analytics + Tribute Platform</div>
+            <h3 class="project-name">VVARSHAA</h3>
+            <div class="project-duration">Apr–May 2026 • Role: Solo developer</div>
+            <p class="project-description">Interactive tribute website built from 55K+ WhatsApp messages — behavioral analytics, leaderboards, quote extraction, and custom visualizations.</p>
+            <div class="project-impact">Converted raw group chat history into interactive storytelling and analytics for an 8-member friend group.</div>
+            <div class="project-stack">
+                <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Vercel</span>
+            </div>
+            <div class="project-links">
+                <a href="https://vvarshaa.vercel.app/" target="_blank" class="project-link icon-link" title="Live Demo" aria-label="Live Demo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                <a href="https://github.com/IHRSI/VVARSHAA" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- InsaafBot -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-medium">medium wave</div>
+            <div class="project-category">Legal AI <span class="project-status-badge">Runner-Up</span></div>
+            <h3 class="project-name">InsaafBot</h3>
+            <div class="project-duration">Aug 2024 • Role: Developer</div>
+            <p class="project-description">Built a legal AI assistant trained on 400+ legal resources, enabling natural language access to 75+ years of legal archives.</p>
+            <div class="project-impact">Made decades of legal information searchable through conversational queries.</div>
+            <div class="project-stack">
+                <span class="stack-tag">Conva.AI SDK</span><span class="stack-tag">Python</span><span class="stack-tag">HTML</span><span class="stack-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/IHRSI/InsaafBot" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- BounceBack -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-medium">medium wave</div>
+            <div class="project-category">User Retention<span class="project-status-badge">Hackathon Finalist</span></div>
+            <h3 class="project-name">BounceBack</h3>
+            <div class="project-duration">Mar 2025 • Role: Developer</div>
+            <p class="project-description">Behavior-based risk detection platform predicting churn and user disengagement with automated SMS retention alerts.</p>
+            <div class="project-impact">Analyzed 1000+ user behavior patterns. Generated automated retention alerts via neural network model.</div>
+            <div class="project-stack">
+                <span class="stack-tag">Python</span><span class="stack-tag">Supabase</span><span class="stack-tag">Twilio</span><span class="stack-tag">Machine Learning</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/IHRSI/BounceBack" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- CURA -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-medium">medium wave</div>
+            <div class="project-category">Healthcare Management</div>
+            <h3 class="project-name">CURA</h3>
+            <div class="project-duration">Mar 2026 • Role: Solo Developer</div>
+            <p class="project-description">Full-stack hospital management platform — 7 modules, 20+ views, patient/doctor management, invoice generation, billing workflows.</p>
+            <div class="project-stack">
+                <span class="stack-tag">Django</span><span class="stack-tag">Bootstrap</span><span class="stack-tag">Python</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/IHRSI/CURA" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+        <!-- BookEase -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-small">small wave</div>
+            <div class="project-category">Railway Reservation System</div>
+            <h3 class="project-name">BookEase</h3>
+            <div class="project-duration">Nov 2025 • Role: Developer</div>
+            <p class="project-description">Railway booking and management app with 7-table ER model, triggers, procedures, full CRUD workflow.</p>
+            <div class="project-stack">
+                <span class="stack-tag">React</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">CSS</span>
+            </div>
+            <div class="project-links">
+                <a href="https://dbsrail.vercel.app/" target="_blank" class="project-link icon-link" title="Live Demo" aria-label="Live Demo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+            </div>
+        </div>
+        <!-- MediTrack -->
+        <div class="project-card">
+            <div class="project-wave-indicator wave-small">small wave</div>
+            <div class="project-category">Desktop Application</div>
+            <h3 class="project-name">MediTrack</h3>
+            <div class="project-duration">Oct–Nov 2024 • Role: Developer</div>
+            <p class="project-description">JavaFX desktop healthcare app — 10+ screens, 3+ hospital modules, patient/doctor/appointment management.</p>
+            <div class="project-stack">
+                <span class="stack-tag">Java</span><span class="stack-tag">JavaFX</span><span class="stack-tag">Ubuntu</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/IHRSI/MediTrack" target="_blank" class="project-link icon-link" title="GitHub" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Interlaken Achievements -->
+    <section id="interlaken-achievements" class="section section-achievements">
+      <div class="cloud-layer cloud-1"><div class="cloud cloud-1"></div></div>
+      <div class="cloud-layer cloud-2"><div class="cloud cloud-2"></div></div>
+      <div class="cloud-layer cloud-3"><div class="cloud cloud-3"></div></div>
+      <div class="cloud-layer cloud-4"><div class="cloud cloud-4"></div></div>
+      
+      <div class="achievements-header reveal">
+        <p class="achievements-location">Interlaken Skydive</p>
+        <h2 class="achievements-title">Achievements</h2>
+        <div class="altitude-hud">Altitude: 13,000ft. Freefall speed: 190km/h. Parachute: Armed.</div>
+      </div>
+      
+      <div class="altitude-levels">
+         <!-- Stratosphere -->
+         <div class="altitude-layer reveal">
+            <h3 class="layer-label">Stratosphere — Hackathons</h3>
+            <div class="achievements-grid">
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-platinum">🏆</div>
+                        <h4 class="achievement-title">Amazon HackOn</h4>
+                        <span class="achievement-level-tag">National</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">Amazon HackOn</h4>
+                        <p class="achievement-result">Pre-Finalist</p>
+                        <p class="achievement-detail">Top 130 out of 15,000+ teams</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-silver">🥈</div>
+                        <h4 class="achievement-title">GenAI Hackathon</h4>
+                        <span class="achievement-level-tag">University</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">GenAI Hackathon</h4>
+                        <p class="achievement-result">2nd Place</p>
+                        <p class="achievement-detail">Among 30+ teams</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-bronze">🥉</div>
+                        <h4 class="achievement-title">Smart India Hackathon</h4>
+                        <span class="achievement-level-tag">National</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">Smart India Hackathon</h4>
+                        <p class="achievement-result">Internal Finalist</p>
+                        <p class="achievement-detail">Top 39 out of 126 teams</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Troposphere -->
+         <div class="altitude-layer reveal">
+            <h3 class="layer-label">Troposphere — National & Competitive</h3>
+            <div class="achievements-grid">
+               <!-- Card 1 -->
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-gold">🥇</div>
+                        <h4 class="achievement-title">JEE Mains 2023</h4>
+                        <span class="achievement-level-tag">National</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">JEE Mains 2023</h4>
+                        <p class="achievement-result">98.78 Percentile</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-gold">🥇</div>
+                        <h4 class="achievement-title">JEE Advanced</h4>
+                        <span class="achievement-level-tag">National</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">JEE Advanced</h4>
+                        <p class="achievement-result">AIR 21521</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="flip-card">
+                  <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                        <div class="achievement-badge badge-platinum">🏆</div>
+                        <h4 class="achievement-title">SOF IMO</h4>
+                        <span class="achievement-level-tag">International</span>
+                     </div>
+                     <div class="flip-card-back">
+                        <h4 class="achievement-title">SOF IMO</h4>
+                        <p class="achievement-result">International Rank 5</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Library Education -->
+    <section id="library-education" class="section section-education">
+      <div class="library-glow"></div>
+      <div class="education-header reveal">
+        <p class="education-location">The Ancient Library</p>
+        <h2 class="education-title">Education</h2>
+      </div>
+      <div class="bookshelf reveal">
+         <div class="book-container" onclick="this.querySelector('.book').classList.toggle('open')">
+            <div class="book">
+               <div class="book-spine spine-pine">
+                  <span class="spine-title">B.Tech CSE</span>
+                  <span class="spine-institution">Manipal Institute of Technology</span>
+                  <span class="spine-click-hint">Click to open</span>
+               </div>
+               <div class="book-content">
+                  <h4 class="book-degree">BTech — Computer Science Engineering</h4>
+                  <p class="book-institution">Manipal Institute of Technology, Karnataka</p>
+                  <p class="book-duration">2023 – 2027</p>
+                  <p class="book-result">8.00 CGPA</p>
+                  <ul class="book-highlights">
+                     <li>Coursework: DSA, DBMS, OS, Networks, Cryptography, SDLC</li>
+                     <li>Leadership roles across 6+ student organizations and technical communities.</li>
+                     <li>Hackathon finalist multiple times</li>
+                  </ul>
+                  <div class="book-close-hint">Click to close</div>
+               </div>
+            </div>
+         </div>
+         <div class="book-container" onclick="this.querySelector('.book').classList.toggle('open')">
+            <div class="book">
+               <div class="book-spine spine-amber">
+                  <span class="spine-title">Class XII</span>
+                  <span class="spine-institution">Delhi Public School Bokaro</span>
+                  <span class="spine-click-hint">Click to open</span>
+               </div>
+               <div class="book-content">
+                  <h4 class="book-degree">CBSE Class XII</h4>
+                  <p class="book-institution">Delhi Public School Bokaro</p>
+                  <p class="book-result">90.2%</p>
+                  <ul class="book-highlights">
+                     <li>JEE Mains 98.78 Percentile</li>
+                     <li>JEE Advanced AIR 21521</li>
+                  </ul>
+                  <div class="book-close-hint">Click to close</div>
+               </div>
+            </div>
+         </div>
+         <div class="book-container" onclick="this.querySelector('.book').classList.toggle('open')">
+            <div class="book">
+               <div class="book-spine spine-coral">
+                  <span class="spine-title">Class X</span>
+                  <span class="spine-institution">Delhi Public School Bokaro</span>
+                  <span class="spine-click-hint">Click to open</span>
+               </div>
+               <div class="book-content">
+                  <h4 class="book-degree">CBSE Class X</h4>
+                  <p class="book-institution">Delhi Public School Bokaro</p>
+                  <p class="book-result">97.4%</p>
+                  <ul class="book-highlights">
+                     <li>SOF IMO International Rank 5</li>
+                  </ul>
+                  <div class="book-close-hint">Click to close</div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Victoria Falls Leadership -->
+    <section id="victoria-falls-leadership" class="section section-leadership">
+      <div class="waterfall-mist"></div>
+      <div class="leadership-header reveal">
+        <p class="leadership-location">Victoria Falls</p>
+        <h2 class="leadership-title">Leadership</h2>
+      </div>
+      <div class="streams-grid reveal">
+         <div class="stream-card thick">
+            <span class="stream-type type-leadership">Leadership</span>
+            <h4 class="stream-role">Social Welfare Director</h4>
+            <p class="stream-org">Red-X Manipal</p>
+            <p class="stream-duration">Aug 2025 – Present</p>
+            <p class="stream-impact">Led 3+ donation drives across NGOs. Managed 3+ large-scale treks for 200+ participants.</p>
+         </div>
+         <div class="stream-card thick">
+            <span class="stream-type type-leadership">Leadership</span>
+            <h4 class="stream-role">Core Committee</h4>
+            <p class="stream-org">Revels, MIT Manipal</p>
+            <p class="stream-duration">Jan 2026 – Mar 2026</p>
+            <p class="stream-impact">Coordinated logistics and publicity for large-scale events involving 900+ participants.</p>
+         </div>
+         <div class="stream-card medium">
+            <span class="stream-type type-leadership">Leadership</span>
+            <h4 class="stream-role">Coordinator</h4>
+            <p class="stream-org">Placement Team MIT Manipal</p>
+            <p class="stream-duration">Jan 2025 – Jan 2026</p>
+            <p class="stream-impact">Organized 6+ pre-placement talks for leading companies. Managed audiences of 250–300+ students.</p>
+         </div>
+         <div class="stream-card medium">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Management Committee</h4>
+            <p class="stream-org">Red-X Manipal</p>
+            <p class="stream-duration">Feb 2025 – Aug 2025</p>
+            <p class="stream-impact">Led week-long membership drive. Trained volunteers in pitching — 150+ membership sales.</p>
+         </div>
+         <div class="stream-card medium">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Organizing Committee</h4>
+            <p class="stream-org">Revels Publicity</p>
+            <p class="stream-duration">Jan 2025 – Mar 2025</p>
+            <p class="stream-impact">Led publicity and creative campaigns reaching 12,000+ students.</p>
+         </div>
+         <div class="stream-card thin">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Organizing Committee</h4>
+            <p class="stream-org">TechTatva, MIT Manipal</p>
+            <p class="stream-duration">Aug 2024 – Oct 2024</p>
+            <p class="stream-impact">Designed and hosted a debugging workshop for 100+ students.</p>
+         </div>
+         <div class="stream-card thin">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Working Committee</h4>
+            <p class="stream-org">IECSE Manipal</p>
+            <p class="stream-duration">Nov 2023 – Aug 2025</p>
+            <p class="stream-impact">Contributed to technical events, operations, and community initiatives.</p>
+         </div>
+         <div class="stream-card thin">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Working Committee</h4>
+            <p class="stream-org">MIST Cybersecurity</p>
+            <p class="stream-duration">Nov 2023 – Aug 2025</p>
+            <p class="stream-impact">Participated in cybersecurity-focused events, workshops, and technical initiatives.</p>
+         </div>
+         <div class="stream-card thin">
+            <span class="stream-type type-extracurricular">Extracurricular</span>
+            <h4 class="stream-role">Working Committee</h4>
+            <p class="stream-org">Photography Club</p>
+            <p class="stream-duration">Nov 2023 – Nov 2024</p>
+            <p class="stream-impact">Member of the photography community at Manipal.</p>
+         </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Summit Contact -->
+    <section id="summit-contact" class="section section-contact">
+      <div class="summit-panorama">
+         <div class="summit-mountain-1"></div>
+         <div class="summit-mountain-2"></div>
+         <div class="summit-mountain-3"></div>
+      </div>
+      <div class="summit-stars">
+         <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+         <div class="star" style="top: 30%; left: 80%; animation-delay: 1s;"></div>
+         <div class="star" style="top: 50%; left: 40%; animation-delay: 2s;"></div>
+         <div class="star" style="top: 20%; left: 90%; animation-delay: 0.5s;"></div>
+         <div class="star" style="top: 40%; left: 10%; animation-delay: 1.5s;"></div>
+      </div>
+      <div class="contact-header reveal">
+        <p class="contact-location">Mount Everest, 8,848m</p>
+        <h2 class="contact-title">Summit</h2>
+        <p class="contact-subtitle">You scrolled all the way here — let's build something.</p>
+      </div>
+      
+      <div class="contact-grid reveal">
+         <div class="summit-register">
+            <form action="https://formspree.io/f/xpqeankr" method="POST" id="contact-form">
+               <div data-fs-success style="display: none; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--aurora-teal); margin-bottom: 1rem;">&gt; Log transmitted successfully.</div>
+               <div data-fs-error style="display: none; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: #e74c3c; margin-bottom: 1rem;">&gt; Transmission failed. Check connection.</div>
+
+               <div class="form-field">
+                  <label class="form-label" for="name">Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Fellow expeditioner..." required data-fs-field>
+                  <span data-fs-error="name" style="color: #e74c3c; font-size: 0.7rem; font-family: 'IBM Plex Mono', monospace;"></span>
+               </div>
+               <div class="form-field">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="How to reach you at base camp" required data-fs-field>
+                  <span data-fs-error="email" style="color: #e74c3c; font-size: 0.7rem; font-family: 'IBM Plex Mono', monospace;"></span>
+               </div>
+               <div class="form-field">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea id="message" name="message" class="form-textarea" placeholder="What are we building?" required data-fs-field></textarea>
+                  <span data-fs-error="message" style="color: #e74c3c; font-size: 0.7rem; font-family: 'IBM Plex Mono', monospace;"></span>
+               </div>
+               <button type="submit" class="form-submit" data-fs-submit-btn>Leave a Mark</button>
+            </form>
+            <div class="contact-info-row">
+               <div class="contact-info-item">hitencse75@gmail.com</div>
+               <div class="contact-info-item">+91 9608618184</div>
+            </div>
+         </div>
+         
+         <div class="trail-signs">
+            <a href="https://github.com/IHRSI" target="_blank" class="trail-sign">
+               <div class="trail-sign-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+               </div>
+               <div>
+                  <div class="trail-sign-label">GitHub Trail</div>
+                  <div class="trail-sign-url">github.com/IHRSI</div>
+               </div>
+            </a>
+            <a href="https://linkedin.com/in/hiten-raj-singh-451998283" target="_blank" class="trail-sign">
+               <div class="trail-sign-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+               </div>
+               <div>
+                  <div class="trail-sign-label">LinkedIn Pass</div>
+                  <div class="trail-sign-url">linkedin.com/in/hiten-raj-singh</div>
+               </div>
+            </a>
+            <a href="https://leetcode.com/u/IHRSI/" target="_blank" class="trail-sign">
+               <div class="trail-sign-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+               </div>
+               <div>
+                  <div class="trail-sign-label">LeetCode Ridge</div>
+                  <div class="trail-sign-url">leetcode.com/u/IHRSI/</div>
+               </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1f2vsR4WPG0cb152r2Rry8NLqkGVaK4Fc/view?usp=drive_link" target="_blank" class="resume-button">
+               View Expedition Permit <span style="opacity: 0.6; font-size: 0.85em; margin-left: 0.4rem;">(Resume)</span>
+            </a>
+         </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <!-- Footer -->
+  <footer class="expedition-footer">
+     <p class="footer-text">Crafted and engineered by Hiten Raj Singh. &copy; HRS<br>The <a href="https://github.com/IHRSI">Expedition</a> continues.</p>
+  </footer>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
