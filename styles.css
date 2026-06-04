@@ -156,6 +156,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -164,6 +166,8 @@ body {
   background: var(--bg-body);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   transition: background var(--transition-slow), color var(--transition-slow);
 }
 
@@ -3854,5 +3858,19 @@ body.night-mode .resume-button:hover {
   .book-spine {
     box-shadow: none !important;
     border: 1px solid #ddd !important;
+  }
+}
+
+/* =========================================
+   Mobile Performance Overrides
+========================================= */
+@media (max-width: 768px) {
+  /* Reduce GPU load from heavy blurs on mobile devices */
+  .bento-pane,
+  .aurora-content,
+  .project-card,
+  .expedition-nav {
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
   }
 }
