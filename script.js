@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastX = mouseX;
     let lastY = mouseY;
 
-    if (cursorDot && cursorRing) {
+    const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches || window.innerWidth < 768;
+
+    if (cursorDot && cursorRing && !isTouchDevice) {
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
@@ -276,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3D Tilt Effect on Aurora Bio Card
     const auroraCard = document.querySelector('.aurora-content');
-    if (auroraCard) {
+    if (auroraCard && !isTouchDevice) {
         auroraCard.addEventListener('mousemove', (e) => {
             const rect = auroraCard.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -300,15 +302,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Project Cards Hover Glow Effect
     const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+    if (!isTouchDevice) {
+        projectCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
         });
-    });
+    }
 
     // Form Confetti and Submit Override
     const contactForm = document.getElementById('contact-form');
