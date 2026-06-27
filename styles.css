@@ -2427,8 +2427,9 @@ body.night-mode .project-link:hover {
 }
 
 .achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.2rem;
 }
 
@@ -2437,6 +2438,8 @@ body.night-mode .project-link:hover {
   perspective: 1000px;
   height: 200px;
   cursor: pointer;
+  flex: 1 1 280px;
+  max-width: 320px;
 }
 
 .flip-card-inner {
@@ -2867,8 +2870,9 @@ body.night-mode .book-result {
 
 /* Stream cards */
 .streams-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.2rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -2886,6 +2890,8 @@ body.night-mode .book-result {
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 350px;
 }
 
 .stream-card::before {
@@ -3594,11 +3600,23 @@ body.night-mode .resume-button:hover {
   }
 
   .achievements-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flip-card {
+    max-width: 100%;
+    width: 100%;
   }
 
   .streams-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stream-card {
+    max-width: 100%;
+    width: 100%;
   }
 
   .bookshelf {
