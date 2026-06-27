@@ -214,6 +214,56 @@ section {
    GLOBAL ELEMENTS
    ============================================ */
 
+/* Top Center Floating Social Nav */
+.floating-social-nav {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  background: rgba(18, 18, 18, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-normal);
+}
+
+body.day-mode .floating-social-nav {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.social-nav-link {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.social-nav-link:hover {
+  color: var(--aurora-teal);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .floating-social-nav {
+    top: 1rem;
+    padding: 0.6rem 1.2rem;
+    gap: 1.2rem;
+  }
+  .social-nav-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* --- Day/Night Toggle --- */
 .theme-toggle {
   position: fixed;
@@ -1074,6 +1124,7 @@ body.day-mode .hero-stamp {
   background: var(--aurora-sky);
   position: relative;
   overflow: hidden;
+  padding: var(--section-padding);
 }
 
 /* Aurora bands */
@@ -1543,6 +1594,54 @@ body.night-mode .bento-pane {
   padding: var(--section-padding);
   position: relative;
 }
+
+/* Tech Snowfall Background */
+.tech-snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5; /* Flows over the tech stack skills */
+}
+
+.snow-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.08; /* Nicely visible in night mode */
+  animation: techSnow linear infinite;
+}
+
+body.day-mode .snow-icon {
+  opacity: 0.10;
+  filter: invert(1);
+}
+
+@keyframes techSnow {
+  0% {
+    top: -10%;
+    transform: translateX(-5vw) rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(5vw) rotate(360deg);
+  }
+}
+
+/* Faster speeds and larger sizes */
+.snow-icon:nth-child(1) { left: 5%; animation-duration: 18s; animation-delay: -5s; width: 90px; height: 90px; }
+.snow-icon:nth-child(2) { left: 15%; animation-duration: 25s; animation-delay: -12s; width: 60px; height: 60px; }
+.snow-icon:nth-child(3) { left: 25%; animation-duration: 20s; animation-delay: -2s; width: 110px; height: 110px; }
+.snow-icon:nth-child(4) { left: 35%; animation-duration: 30s; animation-delay: -15s; width: 75px; height: 75px; }
+.snow-icon:nth-child(5) { left: 45%; animation-duration: 22s; animation-delay: -8s; width: 100px; height: 100px; }
+.snow-icon:nth-child(6) { left: 55%; animation-duration: 35s; animation-delay: -22s; width: 70px; height: 70px; }
+.snow-icon:nth-child(7) { left: 65%; animation-duration: 21s; animation-delay: -18s; width: 85px; height: 85px; }
+.snow-icon:nth-child(8) { left: 75%; animation-duration: 28s; animation-delay: -25s; width: 95px; height: 95px; }
+.snow-icon:nth-child(9) { left: 85%; animation-duration: 19s; animation-delay: -4s; width: 105px; height: 105px; }
+.snow-icon:nth-child(10) { left: 95%; animation-duration: 26s; animation-delay: -10s; width: 65px; height: 65px; }
 
 .tech-header {
   text-align: center;
