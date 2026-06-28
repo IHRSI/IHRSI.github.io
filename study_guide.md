@@ -111,6 +111,30 @@ Used in the **Tech Stack** to make the skill chips look dynamic rather than rigi
 ### 4.5 Native Smooth Scrolling
 Achieved smoothly natively with zero JavaScript by simply adding `scroll-behavior: smooth;` to the `html` selector in CSS.
 
+### 4.6 Z-Index Layering & Parallax Masks
+Used heavily in the **Glacier (Experience)** section to create a sense of deep immersion.
+* **Concept**: `z-index` controls the vertical stacking order of elements, but it only works on elements that have a `position` (like `relative`, `absolute`, or `fixed`).
+* **Masking**: We used `-webkit-mask-image` with inline SVG strings to carve out the jagged edges of our dark `.glacier-crevasse` elements. By layering a front crevasse (`z-index: 0`) and a back crevasse, we created a 3D cavern effect entirely in CSS without loading external image files.
+
+### 4.7 CSS Blend Modes (`mix-blend-mode`)
+Used for the day/night reactive particles in the **Glacier** section.
+* **The Problem**: A white glowing particle looks great on a dark night background, but completely washes out and vanishes on a bright yellow/orange day background.
+* **The Solution**: We applied `mix-blend-mode: multiply;` to the sparks in day mode. This forces the particle color to mathematically multiply with the background behind it, turning bright glowing sparks into realistic dark floating ash/embers against the daytime sky.
+
+### 4.8 Responsive Layout Resets (Flexbox Centering)
+Used to ensure clean alignment in the **Achievements** section on mobile.
+* **The Problem**: A CSS Grid of 6 tall flip-cards wrapping naturally can look unbalanced or off-center on small screens where they break into a single column.
+* **The Solution**: We applied `flex-direction: column; align-items: center;` in our mobile media queries for the `.achievements-grid`. This forces the cards to elegantly stack into a perfectly centered, single vertical column, ensuring maximum readability and a clean layout on phones without complex grid re-calculations.
+
+### 4.9 The `100vh` Viewport Trap
+* **The Problem**: Giving a section `min-height: 100vh;` tells it to fill 100% of the viewport height. However, when a user forces "Desktop Site" on a mobile browser, the viewport height scales wildly relative to the phone's tall aspect ratio (e.g., behaving as if the screen is over 2,000px tall). This left massive empty blue space below our achievements.
+* **The Solution**: We removed `min-height: 100vh` on that specific section and relied on traditional layout padding (`padding-bottom: 6rem;`). The section now tightly wraps its content regardless of simulated viewport distortions.
+
+### 4.10 SVG Illumination & Advanced `nth-child` Targeting
+Used in the **Tech Stack (Zermatt)** section and the **Floating Social HUD**.
+* **Concept**: We applied transition delays based on child order using `:nth-child` or CSS variables (`--i`) to create cascading illumination effects when items are revealed.
+* **SVG Manipulation**: By explicitly targeting SVG paths inside a parent container (e.g., `.social-nav-link:hover svg path`), we were able to transition the `fill` or `stroke` color of complex logos to "light up" natively via CSS, providing incredibly tactile visual feedback without needing extra images.
+
 ---
 
 ## 🎬 5. Motion, Animation & 3D CSS (The Cinematic Magic)
@@ -312,3 +336,21 @@ We want a gradient glow that follows the exact position of the user's mouse over
 This portfolio isn't just a display of your projects; **the code itself is the greatest project**. 
 
 By understanding the mechanics documented here—CSS Grid, the Intersection Observer, 3D Transforms, native theming, and Physics Loops—you have mastered the core pillars of advanced web development. This implementation demonstrates a mastery of the browser's rendering pipeline: delegating complex logic to CSS and the GPU, while utilizing JavaScript exclusively for state management and high-performance observation. This achieves 60+ FPS stability across all devices without requiring a virtual DOM or third-party libraries.
+
+---
+
+## 🏛️ 9. Core Architectural Decisions
+
+A detailed breakdown of the engineering decisions behind choosing a vanilla architecture over a heavy JS framework (like React or Next.js).
+
+### 9.1 The Performance Argument (Time To Interactive)
+React is designed for highly reactive data states (like dashboards or complex web apps). For a visual, scroll-driven narrative, loading large amounts of virtual DOM-diffing logic before the user can interact introduces an unnecessary performance bottleneck. By relying on Vanilla JS and CSS, the Time to Interactive (TTI) is near-instant, and there is zero "hydration" delay.
+
+### 9.2 Event Listener Optimization (`requestAnimationFrame`)
+When building the custom trailing cursor and parallax effects, attaching style changes directly to a `mousemove` event listener can trigger hundreds of times a second, causing layout thrashing and dropped frames. This project decouples that logic: event listeners are used *purely* to capture coordinates, while `requestAnimationFrame` (rAF) executes the visual updates in sync with the monitor's exact refresh rate, ensuring a buttery smooth 60+ FPS experience.
+
+### 9.3 CSS-Driven Logic (GPU Offloading)
+Instead of relying on heavy JS animation libraries for scroll reveals, particle tracking, and glow effects, this project pushes the visual heavy lifting to the GPU via CSS. For dynamic hover glows, JS merely passes the mouse X/Y coordinates to CSS custom variables, and a native CSS radial-gradient renders the glow. This completely bypasses the Javascript main thread for rendering, meaning animations stay smooth even under heavy load.
+
+### 9.4 DOM Memory Management (Garbage Collection)
+When building dynamic effects (like the Confetti Engine or Particle System), there is a risk of memory leaks if nodes are added to the DOM endlessly. These systems are specifically engineered to clean up after themselves—dynamic elements are safely destroyed via `setTimeout` or `IntersectionObserver` after they complete their lifecycle, ensuring the browser's memory footprint remains flat.

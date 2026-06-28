@@ -258,6 +258,7 @@ body.day-mode .floating-social-nav {
     padding: 0.6rem 1.2rem;
     gap: 1.2rem;
   }
+
   .social-nav-link svg {
     width: 18px;
     height: 18px;
@@ -579,6 +580,32 @@ body.night-mode .theme-toggle .icon-moon {
   animation: pStar var(--duration) linear infinite var(--delay);
 }
 
+/* 4.5 Experience Sparks */
+.p-spark {
+  width: var(--size);
+  height: var(--size);
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px #ff5722, 0 0 6px 2px #ff9800;
+  animation: pSpark var(--duration) ease-in infinite var(--delay);
+  opacity: 0;
+}
+
+@keyframes pSpark {
+  0% { transform: translate(var(--start-x), 100vh); opacity: 0; }
+  10% { opacity: 1; transform: translate(var(--start-x), 90vh); }
+  50% { opacity: 0.8; transform: translate(calc(var(--start-x) + 2vw), 40vh); }
+  80% { opacity: 0.3; transform: translate(calc(var(--start-x) - 1vw), 10vh); }
+  100% { opacity: 0; transform: translate(calc(var(--start-x) + 1vw), -10vh); }
+}
+
+body.day-mode .p-spark {
+  background: #d84315;
+  box-shadow: 0 0 4px 1px #ff5722;
+  mix-blend-mode: multiply;
+  opacity: 0;
+}
+
 @keyframes pStar {
   0% {
     transform: translate(var(--start-x), -10vh) rotate(45deg);
@@ -880,7 +907,8 @@ body.night-mode .hero-mountain-front {
 }
 
 body.day-mode .flowing-keyword {
-  color: rgba(255, 255, 255, 0.08); /* Brighter white for new deep blue sky */
+  color: rgba(255, 255, 255, 0.08);
+  /* Brighter white for new deep blue sky */
 }
 
 @keyframes windFlow {
@@ -1432,16 +1460,16 @@ body.night-mode .bento-pane {
 .bento-terminal .terminal-header {
   border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 1.5rem;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .coord-numbers {
-  font-size: 0.75rem; 
-  opacity: 0.6; 
-  font-family: 'IBM Plex Mono', monospace; 
+  font-size: 0.75rem;
+  opacity: 0.6;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
 }
 
@@ -1556,11 +1584,11 @@ body.night-mode .bento-pane {
 }
 
 .field-notes-content {
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 1rem; 
-  font-size: 0.8rem; 
-  color: var(--text-secondary); 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
   justify-content: center;
 }
 
@@ -1604,14 +1632,16 @@ body.night-mode .bento-pane {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 5; /* Flows over the tech stack skills */
+  z-index: 5;
+  /* Flows over the tech stack skills */
 }
 
 .snow-icon {
   position: absolute;
   width: 40px;
   height: 40px;
-  opacity: 0.08; /* Nicely visible in night mode */
+  opacity: 0.08;
+  /* Nicely visible in night mode */
   animation: techSnow linear infinite;
 }
 
@@ -1625,6 +1655,7 @@ body.day-mode .snow-icon {
     top: -10%;
     transform: translateX(-5vw) rotate(0deg);
   }
+
   100% {
     top: 110%;
     transform: translateX(5vw) rotate(360deg);
@@ -1632,16 +1663,85 @@ body.day-mode .snow-icon {
 }
 
 /* Faster speeds and larger sizes */
-.snow-icon:nth-child(1) { left: 5%; animation-duration: 18s; animation-delay: -5s; width: 90px; height: 90px; }
-.snow-icon:nth-child(2) { left: 15%; animation-duration: 25s; animation-delay: -12s; width: 60px; height: 60px; }
-.snow-icon:nth-child(3) { left: 25%; animation-duration: 20s; animation-delay: -2s; width: 110px; height: 110px; }
-.snow-icon:nth-child(4) { left: 35%; animation-duration: 30s; animation-delay: -15s; width: 75px; height: 75px; }
-.snow-icon:nth-child(5) { left: 45%; animation-duration: 22s; animation-delay: -8s; width: 100px; height: 100px; }
-.snow-icon:nth-child(6) { left: 55%; animation-duration: 35s; animation-delay: -22s; width: 70px; height: 70px; }
-.snow-icon:nth-child(7) { left: 65%; animation-duration: 21s; animation-delay: -18s; width: 85px; height: 85px; }
-.snow-icon:nth-child(8) { left: 75%; animation-duration: 28s; animation-delay: -25s; width: 95px; height: 95px; }
-.snow-icon:nth-child(9) { left: 85%; animation-duration: 19s; animation-delay: -4s; width: 105px; height: 105px; }
-.snow-icon:nth-child(10) { left: 95%; animation-duration: 26s; animation-delay: -10s; width: 65px; height: 65px; }
+.snow-icon:nth-child(1) {
+  left: 5%;
+  animation-duration: 18s;
+  animation-delay: -5s;
+  width: 90px;
+  height: 90px;
+}
+
+.snow-icon:nth-child(2) {
+  left: 15%;
+  animation-duration: 25s;
+  animation-delay: -12s;
+  width: 60px;
+  height: 60px;
+}
+
+.snow-icon:nth-child(3) {
+  left: 25%;
+  animation-duration: 20s;
+  animation-delay: -2s;
+  width: 110px;
+  height: 110px;
+}
+
+.snow-icon:nth-child(4) {
+  left: 35%;
+  animation-duration: 30s;
+  animation-delay: -15s;
+  width: 75px;
+  height: 75px;
+}
+
+.snow-icon:nth-child(5) {
+  left: 45%;
+  animation-duration: 22s;
+  animation-delay: -8s;
+  width: 100px;
+  height: 100px;
+}
+
+.snow-icon:nth-child(6) {
+  left: 55%;
+  animation-duration: 35s;
+  animation-delay: -22s;
+  width: 70px;
+  height: 70px;
+}
+
+.snow-icon:nth-child(7) {
+  left: 65%;
+  animation-duration: 21s;
+  animation-delay: -18s;
+  width: 85px;
+  height: 85px;
+}
+
+.snow-icon:nth-child(8) {
+  left: 75%;
+  animation-duration: 28s;
+  animation-delay: -25s;
+  width: 95px;
+  height: 95px;
+}
+
+.snow-icon:nth-child(9) {
+  left: 85%;
+  animation-duration: 19s;
+  animation-delay: -4s;
+  width: 105px;
+  height: 105px;
+}
+
+.snow-icon:nth-child(10) {
+  left: 95%;
+  animation-duration: 26s;
+  animation-delay: -10s;
+  width: 65px;
+  height: 65px;
+}
 
 .tech-header {
   text-align: center;
@@ -2306,12 +2406,362 @@ body.night-mode .project-link:hover {
 }
 
 /* ============================================
+   SECTION 4.5: GLACIER EXPERIENCE
+   ============================================ */
+.section-experience {
+  min-height: 100vh;
+  padding: var(--section-padding);
+  background: radial-gradient(circle at 50% 100%, rgba(255, 87, 34, 0.25) 0%, rgba(255, 87, 34, 0) 60%),
+    linear-gradient(180deg, #040914 0%, #081224 50%, #051428 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+body.day-mode .section-experience {
+  background: radial-gradient(circle at 50% 100%, rgba(255, 87, 34, 0.15) 0%, rgba(255, 87, 34, 0) 60%),
+    linear-gradient(180deg, #FFF8D6 0%, #F5C69D 50%, #E68A5C 100%);
+}
+
+.glacier-crevasse {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: #020A14;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0,320L120,250L240,300L360,180L480,270L600,100L720,220L840,150L960,280L1080,120L1200,260L1320,190L1440,320L1440,320L0,320Z"></path></svg>');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: bottom;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.glacier-crevasse-back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-color: rgba(58, 175, 169, 0.15);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0,320L100,150L250,280L380,120L500,250L680,80L800,200L950,90L1100,270L1250,110L1440,320L0,320Z"></path></svg>');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: bottom;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.day-mode .glacier-crevasse {
+  background-color: #BA8E70;
+}
+
+body.day-mode .glacier-crevasse-back {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.experience-header,
+.experience-timeline {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-location {
+  color: #ff5722;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+}
+
+.experience-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 20px rgba(255, 87, 34, 0.2);
+}
+
+/* Timeline Core */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* The Glowing Rope */
+.rope-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+body.day-mode .rope-line {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.rope-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, var(--aurora-teal), transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 15px var(--aurora-teal);
+  animation: ropeClimb 5s linear infinite;
+}
+
+@keyframes ropeClimb {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* Timeline Nodes */
+.timeline-node {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+}
+
+.timeline-node.left {
+  align-self: flex-start;
+  padding-right: 3rem;
+}
+
+.timeline-node.right {
+  align-self: flex-end;
+  padding-left: 3rem;
+  margin-top: -16rem;
+}
+
+/* Carabiners */
+.node-carabiner {
+  position: absolute;
+  top: 2.5rem;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-primary);
+  border: 3px solid var(--aurora-teal);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(58, 175, 169, 0.5);
+  z-index: 3;
+}
+
+body.day-mode .node-carabiner {
+  background: var(--bg-day);
+}
+
+.timeline-node.left .node-carabiner {
+  right: -8px;
+}
+
+.timeline-node.right .node-carabiner {
+  left: -8px;
+}
+
+/* Experience Card */
+.experience-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: all var(--transition-normal);
+}
+
+body.day-mode .experience-card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 87, 34, 0.4);
+  box-shadow: 0 15px 30px rgba(255, 87, 34, 0.15);
+}
+
+body.day-mode .experience-card:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 87, 34, 0.4);
+}
+
+.experience-card:hover .exp-role {
+  color: #ff5722;
+  text-shadow: 0 0 12px rgba(255, 87, 34, 0.4);
+}
+
+.exp-date {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.exp-role {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  transition: all var(--transition-fast);
+}
+
+.exp-org {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #ff9800;
+  margin-bottom: 1.5rem;
+}
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-tech span {
+  font-size: 0.75rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  transition: all var(--transition-fast);
+}
+
+.exp-tech span:hover {
+  background: rgba(255, 87, 34, 0.2);
+  color: #ff9800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.2);
+}
+
+body.day-mode .exp-tech span {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.exp-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.exp-bullets li {
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: all var(--transition-fast);
+}
+
+.exp-bullets li:hover {
+  color: #ff5722;
+  text-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+}
+
+.exp-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.exp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.exp-link svg {
+  width: 24px;
+  height: 24px;
+  transition: all var(--transition-fast);
+}
+
+.exp-link:hover {
+  color: #ff5722;
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(255, 87, 34, 0.6));
+}
+
+@media (max-width: 768px) {
+  .rope-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-node {
+    width: 100%;
+  }
+
+  .timeline-node.left {
+    padding-right: 0;
+    padding-left: 50px;
+  }
+
+  .timeline-node.right {
+    padding-left: 50px;
+    margin-top: 0;
+  }
+
+  .timeline-node.left .node-carabiner,
+  .timeline-node.right .node-carabiner {
+    left: 12px;
+    right: auto;
+  }
+}
+
+/* ============================================
    SECTION 5: INTERLAKEN — ACHIEVEMENTS
    ============================================ */
 .section-achievements {
-  min-height: 100vh;
   background: var(--sky-bg);
   padding: var(--section-padding);
+  padding-bottom: 6rem;
   position: relative;
   overflow: hidden;
 }
@@ -3603,7 +4053,7 @@ body.night-mode .resume-button:hover {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .flip-card {
     max-width: 100%;
     width: 100%;
@@ -3835,6 +4285,19 @@ body.night-mode .resume-button:hover {
     animation: fadeOutTrail 1s forwards;
   }
 
+  /* Glacier Experience: Ember Spark */
+  body.section-glacier-experience .cursor-ring {
+    border-radius: 2px;
+    border-color: #ff5722;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  body.section-glacier-experience .cursor-dot {
+    background: #ff5722;
+    box-shadow: 0 0 10px #ff5722;
+  }
+
   @keyframes fadeOutTrail {
     0% {
       opacity: 0.8;
@@ -3847,12 +4310,14 @@ body.night-mode .resume-button:hover {
     }
   }
 
-  /* Pipeline: Droplet */
+  /* Pipeline: Teardrop/Water */
   body.section-pipeline-projects .cursor-ring {
     border-radius: 50% 50% 50% 0;
     /* Teardrop shape */
-    transform: translate(-50%, -50%) rotate(var(--cursor-angle, -45deg));
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
+
+
 
   /* Interlaken: Aerodynamic Streak */
   body.section-interlaken-achievements .cursor-ring {
@@ -4001,6 +4466,7 @@ body.night-mode .resume-button:hover {
    Mobile Performance Overrides
 ========================================= */
 @media (max-width: 768px) {
+
   /* Reduce GPU load from heavy blurs on mobile devices */
   .bento-pane,
   .aurora-content,

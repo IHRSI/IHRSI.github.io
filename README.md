@@ -23,6 +23,7 @@ This project rejects the standard "grid of links" approach in favor of a narrati
 - 🌌 **Aurora Moment (About)**: A deep dive into identity, featuring a glassmorphism Bento Grid layout for terminal logs and field notes.
 - 🏔️ **Zermatt (Tech Stack)**: A structured showcase of technical proficiencies, utilizing organic, staggered CSS transforms for skill chips.
 - 🌊 **Pipeline (Projects)**: A logbook of engineering achievements featuring interactive, hover-responsive project cards.
+- 🔥 **Glacier (Experience)**: A timeline-based chronicle of professional experience, featuring a dynamic Campfire Day/Night theme toggle, frosted glassmorphism cards, and interactive ember particles.
 - ☁️ **Interlaken (Achievements)**: Highlights competitive milestones via 3D flip-cards embedded in a parallax cloudscape.
 - 📚 **Library (Education)**: Academic history presented as an interactive 3D bookshelf.
 - 🗺️ **Victoria Falls (Leadership)**: A record of community and leadership roles presented as field journal streams.
@@ -55,6 +56,8 @@ To elevate the user experience, the portfolio is packed with meticulously crafte
 * 🌫️ **Cinematic Fog & Parallax**: The Base Camp hero section features multi-layered CSS fog that drifts infinitely. Background mountain elements utilize subtle CSS transforms to create a sense of deep parallax.
 * 🌌 **3D Aurora Tilt**: The glassmorphic bio card in the About section tracks the user's mouse coordinates, calculating a perspective `rotateX` and `rotateY` tilt in real-time for a stunning 3D glass effect.
 * ❄️ **Section-Aware Particle Engine**: A lightweight JavaScript engine that destroys and spawns different CSS-animated DOM particles depending on your altitude (drifting snow at Base Camp, twinkling stars at the Summit).
+* 🌐 **Floating Social HUD**: A fixed top-center navigation bar containing social links that provides constant, sleek access without cluttering the main content.
+* 💡 **Tech Stack Illumination**: The Zermatt section features SVG logos that dynamically light up and glow on hover, providing tactile visual feedback.
 * 🔄 **3D Flip Mechanics**: Utilizes advanced CSS `transform-style: preserve-3d` and `backface-visibility: hidden` to create interactive, flipping logbook cards and bookshelf items.
 * 📡 **Radar & Beacons**: Uses staggered `@keyframes` to create a sweeping radar effect and pulsing red beacons that add life to the terminal interfaces.
 
