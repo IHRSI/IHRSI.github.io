@@ -278,6 +278,21 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // Footer Observer to fade out Expedition Log on mobile
+    const footerElement = document.querySelector('.expedition-footer');
+    if (footerElement) {
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.body.classList.add('footer-visible');
+                } else {
+                    document.body.classList.remove('footer-visible');
+                }
+            });
+        }, { root: null, threshold: 0.05 });
+        footerObserver.observe(footerElement);
+    }
+
     // 3D Tilt Effect on Aurora Bio Card
     const auroraCard = document.querySelector('.aurora-content');
     if (auroraCard && !isTouchDevice) {

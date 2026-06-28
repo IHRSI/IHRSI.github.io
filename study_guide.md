@@ -126,14 +126,15 @@ Used to ensure clean alignment in the **Achievements** section on mobile.
 * **The Problem**: A CSS Grid of 6 tall flip-cards wrapping naturally can look unbalanced or off-center on small screens where they break into a single column.
 * **The Solution**: We applied `flex-direction: column; align-items: center;` in our mobile media queries for the `.achievements-grid`. This forces the cards to elegantly stack into a perfectly centered, single vertical column, ensuring maximum readability and a clean layout on phones without complex grid re-calculations.
 
-### 4.9 The `100vh` Viewport Trap
-* **The Problem**: Giving a section `min-height: 100vh;` tells it to fill 100% of the viewport height. However, when a user forces "Desktop Site" on a mobile browser, the viewport height scales wildly relative to the phone's tall aspect ratio (e.g., behaving as if the screen is over 2,000px tall). This left massive empty blue space below our achievements.
-* **The Solution**: We removed `min-height: 100vh` on that specific section and relied on traditional layout padding (`padding-bottom: 6rem;`). The section now tightly wraps its content regardless of simulated viewport distortions.
-
-### 4.10 SVG Illumination & Advanced `nth-child` Targeting
+### 4.9 SVG Illumination & Advanced `nth-child` Targeting
 Used in the **Tech Stack (Zermatt)** section and the **Floating Social HUD**.
 * **Concept**: We applied transition delays based on child order using `:nth-child` or CSS variables (`--i`) to create cascading illumination effects when items are revealed.
 * **SVG Manipulation**: By explicitly targeting SVG paths inside a parent container (e.g., `.social-nav-link:hover svg path`), we were able to transition the `fill` or `stroke` color of complex logos to "light up" natively via CSS, providing incredibly tactile visual feedback without needing extra images.
+
+### 4.10 Frosted Glass & Glossy Rim Lighting (iOS Dynamic Island Effect)
+Used in the **Floating Social HUD** to simulate a premium, physical piece of glass.
+* **Blur & Saturation**: Instead of a flat background color, we use a highly transparent background combined with `backdrop-filter: blur(24px) saturate(160%)`. The intense blur creates the glass, while the *saturation boost* ensures that any background elements scrolling beneath the HUD pop vividly through the glass, preventing it from looking washed out.
+* **Rim Lighting**: To simulate a physical 3D bevel catching light from above, we applied an inner box shadow (`inset 0 1px 2px rgba(255, 255, 255, 0.25)`) combined with a slightly brighter top border. This creates a realistic glossy reflection edge entirely in CSS.
 
 ---
 
@@ -173,6 +174,7 @@ Your `script.js` file relies on powerful, modern browser APIs rather than old, l
   1. Fading in content: When a `.reveal` section hits the screen.
   2. The Expedition Log: It detects which `<section>` you are in and updates the terminal text.
   3. The Sidebar: It moves the glowing carabiner down.
+  4. Footer Detection: It detects when the footer is visible on mobile to smoothly fade out the Expedition Log without messy scroll event listeners.
   4. Particle Engine: Updates particles based on current view.
 
 ```javascript
