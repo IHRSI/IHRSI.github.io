@@ -2200,26 +2200,21 @@ body.day-mode .snow-icon {
 }
 
 .project-card {
-  background: var(--bg-card);
+  background: var(--bg-overlay);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1.8rem;
   position: relative;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   flex: 1 1 340px;
   max-width: 380px;
-  /* Paper texture feel */
-  background-image:
-    linear-gradient(var(--bg-card) 0%, var(--bg-card) 100%),
-    repeating-linear-gradient(0deg,
-      transparent,
-      transparent 28px,
-      rgba(0, 0, 0, 0.02) 28px,
-      rgba(0, 0, 0, 0.02) 29px);
 }
 
 .project-card::after {
@@ -2229,7 +2224,7 @@ body.day-mode .snow-icon {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 175, 169, 0.15), transparent 50%);
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 175, 169, 0.30), transparent 45%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
@@ -2244,9 +2239,9 @@ body.night-mode .project-card::after {
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--border-accent);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-card-hover), inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 20px rgba(58, 175, 169, 0.15);
+  border-color: var(--aurora-teal);
 }
 
 .project-wave-indicator {
@@ -2344,17 +2339,30 @@ body.night-mode .project-impact {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.62rem;
   font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
   background: rgba(45, 106, 79, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: var(--fern);
   border: 1px solid rgba(45, 106, 79, 0.15);
+  transition: all var(--transition-fast);
+}
+
+.stack-tag:hover {
+  background: rgba(45, 106, 79, 0.15);
+  transform: translateY(-2px);
 }
 
 body.night-mode .stack-tag {
   background: rgba(58, 175, 169, 0.08);
   color: var(--aurora-teal);
   border-color: rgba(58, 175, 169, 0.15);
+}
+
+body.night-mode .stack-tag:hover {
+  background: rgba(58, 175, 169, 0.18);
+  border-color: var(--aurora-teal);
 }
 
 .project-links {
@@ -2412,12 +2420,13 @@ body.night-mode .project-link:hover {
 }
 
 .project-link svg {
-  transition: transform var(--transition-fast), stroke var(--transition-fast);
+  transition: transform var(--transition-fast), stroke var(--transition-fast), filter var(--transition-fast);
 }
 
 .project-link:hover svg {
   transform: scale(1.15) translateY(-2px);
   stroke: var(--amber);
+  filter: drop-shadow(0 0 8px rgba(192, 125, 26, 0.5));
 }
 
 .project-status-badge {
@@ -4095,6 +4104,8 @@ body.night-mode .resume-button:hover {
   .project-card {
     max-width: 100%;
     width: 100%;
+    flex: none;
+    height: auto;
   }
 
   .achievements-grid {
