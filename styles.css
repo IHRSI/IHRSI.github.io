@@ -222,21 +222,30 @@ section {
   transform: translateX(-50%);
   z-index: 1000;
   display: flex;
-  gap: 1.5rem;
-  padding: 0.8rem 1.8rem;
-  background: rgba(18, 18, 18, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  /* iPhone Glossy / Dynamic Island Effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02));
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.25);
   transition: all var(--transition-normal);
 }
 
 body.day-mode .floating-social-nav {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-top-color: #ffffff;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
 .social-nav-link {
